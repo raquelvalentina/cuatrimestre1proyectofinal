@@ -13,7 +13,7 @@ int main(){
         case 1:
             cout << "--- Vehiculo de diesel por unidad (50$) ---\n\n Cantidad de Vehiculos: "; 
             cin >> cantidad;
-            cantidad = cantidad * vehiculos_D
+            cantidad = cantidad * vehiculos_D;
             cout << "\n >> Monto total: "<< cantidad<< "$"<< endl;
             break;
         case 2:
