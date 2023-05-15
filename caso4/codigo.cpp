@@ -20,7 +20,7 @@ void calcularVuelto(float precio, float cantidadEntregada) {
 
     for (int i = 0; i < 5; i++) {
         if (cantidadMonedas[i] > 0) {
-            if (cantidadMonedas[1] == 1){
+            if (cantidadMonedas[i] == 1){
                 ostringstream ss;
                 ss << fixed << setprecision(2) << monedas[i];
                 string numeroFormateado = ss.str();
@@ -33,7 +33,9 @@ void calcularVuelto(float precio, float cantidadEntregada) {
                 string numeroFormateado2 = ss.str();
                 listaTextos.push_back (to_string(cantidadMonedas[i]) + " monedas de " + numeroFormateado2 + "$\n");
             }}}
+            
     cout<< "\n\n<<< La cantidad de vuelto dada al Cliente: " <<fixed << setprecision(2) << cantidadEntregada - precio <<"$ >>>\n\nVuelto entragado por la maquina:\n"<< endl;
+    
     for (const string& texto : listaTextos){
         cout << "     >>> "<<texto<< endl;
     }}
@@ -50,7 +52,7 @@ int main() {
     if (precio > cantidadEntregada){
         cout<< "\n<<< Dinero insuficiente\n";
     }
-    else if (precio ==cantidadEntregada){
+    else if (precio == cantidadEntregada){
         cout<< "<<< El dinero entregado por el cliente concuerda con el precio del objeto comprado.\n\n>>> Precio: "<< precio<<"\n>>> Cantidad dada: "<< cantidadEntregada<<endl; 
     }
     else {

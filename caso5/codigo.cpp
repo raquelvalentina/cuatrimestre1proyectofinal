@@ -4,13 +4,16 @@
 #include <vector>
 using namespace std;
 
-int promedio(int a, int b, int c){
-    return (a +b + c)/3;
+int promedio(int a, int b, int c)
+{
+    return (a + b + c) / 3;
 }
 
-int main(){
+int main()
+{
     vector<int> listaNumeros;
-    for (int i = 1; i <= 3; ++i){
+    for (int i = 1; i <= 3; ++i)
+    {
         cout << ">>> Ingrese el valor " << i << ": ";
         int numero;
         cin >> numero;
@@ -23,5 +26,6 @@ int main(){
 
     int resultado = promedio(a, b, c);
     cout << "El promedio es: " << resultado << endl;
-    
-    return 0;}
+
+    return 0;
+}
